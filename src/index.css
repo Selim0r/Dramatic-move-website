@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Swiper pagination dot color change */
+.swiper-pagination-bullet {
+  background-color: #facc15 !important; /* Tailwind এর yellow-400 */
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #facc15 !important;
+  opacity: 1;
+}
+
+/* কিছু smooth transition feeling */
+.swiper {
+  transition: all 0.3s ease;
+}
