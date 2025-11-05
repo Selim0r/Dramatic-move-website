@@ -4,15 +4,15 @@ function Navber() {
   const lnk = (
     <>
       <li>Home</li>
-      <li>Home</li>
-      <li>Home</li>
-      <li>Home</li>
+      <li>Movies</li>
+      <li>TvShow</li>
+      <li>New</li>
     </>
   );
 
   return (
     <>
-      <div className="navbar  shadow-md bg-black/40 fixed top-0 right-0 left-0 z-100 text-white backdrop-blur-md  ">
+      <div className="navbar  shadow-md bg-black/40 fixed top-0 right-0 left-0 z-100 text-white backdrop-blur-md font-mon ">
         <div className="w-11/12 mx-auto flex justify-between items-center">
           <div className="navbar-start">
             <div className="dropdown">
@@ -45,7 +45,9 @@ function Navber() {
               </ul>
             </div>
             <div className="flex gap-10 items-center">
-              <a className=" text-xl">Dramatic</a>
+              <a className=" text-[30px] font-griffy text-yellow-400">
+                Dramatic
+              </a>
               <div className="navbar-center hidden lg:flex">
                 <ul className="flex items-center gap-5">{lnk}</ul>
               </div>
