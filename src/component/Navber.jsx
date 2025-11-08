@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navber() {
+function Navber({ setsearch, search }) {
   const lnk = (
     <>
       <li>Home</li>
@@ -77,6 +77,8 @@ function Navber() {
                 required
                 placeholder="Search"
                 className="bg-transparent outline-none text-sm placeholder-white/50 text-white"
+                value={search}
+                onChange={(e) => setsearch(e.target.value)}
               />
             </label>
             <div className="avatar">

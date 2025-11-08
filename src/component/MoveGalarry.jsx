@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import MoveCard from "./MoveCard";
 import TopRated from "./TopRated";
 
-function MoveGalarry() {
+function MoveGalarry({ search }) {
   const [move, setmove] = useState([]);
   const [loading, setloading] = useState(true);
   const [selectCatagory, setselectCatagory] = useState("All");
@@ -63,7 +63,7 @@ function MoveGalarry() {
           <p className="text-gray-400 text-center">No Movie found</p>
         )}
       </div>
-      <TopRated key={move.id} move={move}></TopRated>
+      <TopRated key={move.id} move={move} search={search}></TopRated>
     </>
   );
 }

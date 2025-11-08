@@ -5,10 +5,13 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-
-const TopRated = ({ move }) => {
-  
-  const topRatedMovies = move?.filter((item) => item.rating > 7) || [];
+const TopRated = ({ move, search }) => {
+  const topRatedMovies =
+    move?.filter(
+      (item) =>
+        item.rating > 7 &&
+        item.title.toLowerCase().includes(search.toLowerCase())
+    ) || [];
 
   return (
     <div className="my-10">
@@ -19,7 +22,7 @@ const TopRated = ({ move }) => {
         spaceBetween={20}
         navigation={true}
         autoplay={{
-          delay: 3000, 
+          delay: 3000,
           disableOnInteraction: false,
         }}
         breakpoints={{
